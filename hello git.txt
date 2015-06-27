@@ -1,1 +1,12 @@
 hello git
+
+git init
+git remote add origin https://github.com/snersnass/coursera.git
+git add -A
+git commit -m "message"
+git pull origin master
+git push
+
+git checkout -b branchname    	//	create a branch	
+git branch						//	see what branch you are on
+git checkout master				//	swich back to the master branch type
