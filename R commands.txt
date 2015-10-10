@@ -1,0 +1,8 @@
+#available.packages()
+#install.packages("pkgname")
+#install.packages(c("name1", "name2", "nam...))
+#source("http://bioconductor.org/biocLite.R")
+#biocLite()
+#biocLite(c("name1", "na.,,))
+
+#library(name-no-quotes)    - to use package

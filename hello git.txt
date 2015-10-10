@@ -10,3 +10,17 @@ git push
 git checkout -b branchname    	//	create a branch	
 git branch						//	see what branch you are on
 git checkout master				//	swich back to the master branch type
+-- start here, this works
+git clone url
+git status
+git add  -A
+git status
+git commit -m "message"
+git push
+git pull
+
+durn I forgot the commit message .. escap colon w q
+
+https://www.youtube.com/watch?v=oFYyTZwMyAg  -- for help with bra nchibng
+
+git config --global http.postBuffer 1048576000   // this is used if files too big
