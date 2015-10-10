@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Introduction
 
 This assignment uses data from
@@ -112,3 +113,7 @@ The four plots that you will need to construct are shown below.
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
+=======
+# coursera
+University work - Coursera
+>>>>>>> 7551ca429285e7c3f42bd4964dd35bd327975201
