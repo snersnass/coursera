@@ -1,0 +1,24 @@
+qplot(displ, hwy, data = mpg)
+ qplot(displ, hwy, data = mpg, color=drv)
+ qplot(displ, hwy, data = mpg, color=drv, geom=c("point", "smooth"))
+ qplot(y=hwy, data = mpg, color=drv)
+ 
+ qplot(drv, hwy, data = mpg, geom = "boxplot")
+ qplot(drv, hwy, data = mpg, geom = "boxplot",color=manufacturer)
+ 
+ hist
+ qplot(hwy, data=mpg, fill=drv)
+ 
+ multi: number of rows (to the left of the ~) and number of | columns (to the right of the ~)
+ qplot(displ, hwy, data = mpg, facets = .~drv)
+ qplot(hwy, data = mpg, facets = drv~. ,binwidth=2)
+ 
+  Obviously, there's a DATA FRAME which contains the data you're trying to plot. Then the
+| AESTHETIC MAPPINGS determine how data are mapped to color, size, etc. The GEOMS (geometric
+| objects) are what you see in the plot (points, lines, shapes) and FACETS are the panels used in
+| conditional plots. You've used these or seen them used in the first ggplot2 (qplot) lesson.
+
+ There are 3 more. STATS are statistical transformations such as binning, quantiles, and
+| smoothing which ggplot2 applies to the data. SCALES show what coding an aesthetic map uses (for
+| example, male = red, female = blue). Finally, the plots are depicted on a COORDINATE SYSTEM.
+| When you use qplot these were taken care of for you.
