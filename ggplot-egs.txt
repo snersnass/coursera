@@ -22,3 +22,35 @@ qplot(displ, hwy, data = mpg)
 | smoothing which ggplot2 applies to the data. SCALES show what coding an aesthetic map uses (for
 | example, male = red, female = blue). Finally, the plots are depicted on a COORDINATE SYSTEM.
 | When you use qplot these were taken care of for you.
+
+qplot(displ, hwy, data=mpg, geom=c("point", "smooth"), facets=.~drv, method="loess")
+
+g <-ggplot(mpg, aes(displ, hwy))
+g+geom_point()
+g+geom_point()+geom_smooth()
+g+geom_point()+geom_smooth(method="lm")
+g+geom_point()+geom_smooth(method="lm")+facet_grid(.~drv)
+g+geom_point()+geom_smooth(method="lm")+facet_grid(.~drv) + ggtitle("Swirl Rules!")
+
+g+geom_point(color="pink", size=4, alpha=0.5)
+g+geom_point(aes(color=drv), size=4, alpha=0.5)
+g+geom_point(aes(color=drv))+labs(title="Swirl Rules!")+labs(x="Displacement", y="Hwy Mileage")
+
+g+geom_point(aes(color=drv), size=2, alpha=0.5)+geom_smooth(size=4, linetype=3, method="lm", se=FALSE)
+# lm = linear regression, linetpye = dashed, size = big se = turn off gray shadows of confidence
+
+g+geom_point(aes(color=drv))+theme_bw(base_family="Times")
+
+plot(myx, myy, type="l", ylime=c(-3,3))
+# type = line graph
+
+g <- ggplot(testdat, aes(x = myx, y = myy)) 
+g <- geom_line()
+g+geom_line()+ylim(-3, 3)
+g+geom_line()+coord_cartesian(ylim=c(-3,3))
+
+g <- ggplot(data=mpg, aes(x=displ, y=hwy, color = factor(year)))
+g+geom_point()
+g+geom_point()+facet_grid(drv~cyl, margins=TRUE)
+g+geom_point()+facet_grid(drv~cyl, margins=TRUE)+geom_smooth(method="lm", se=FALSE, size=2, color="black")
+g+geom_point()+facet_grid(drv~cyl, margins=TRUE)+geom_smooth(method="lm", se=FALSE, size=2, color="black")+labs(x="Displacement", y="Highway Mileage", title="Swirl Rules!")
